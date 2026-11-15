@@ -1,0 +1,12 @@
+{
+  "name": "Bingo 75",
+  "short_name": "Bingo 75",
+  "description": "Tablero presencial de Bingo 75",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#101b2e",
+  "theme_color": "#101b2e",
+  "icons": [{ "src": "/bingo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
