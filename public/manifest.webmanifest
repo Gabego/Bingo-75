@@ -1,7 +1,7 @@
 {
   "name": "Bingo 75",
   "short_name": "Bingo 75",
-  "description": "Tablero presencial de Bingo 75",
+  "description": "Tablero de Bingo 75 con guía para compartir la pantalla",
   "lang": "es-CO",
   "start_url": "./",
   "scope": "./",

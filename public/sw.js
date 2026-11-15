@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bingo75-v0.1.0-r4';
+const CACHE_NAME = 'bingo75-v0.2.0-r1';
 const APP_ROOT = new URL(self.registration.scope);
 const APP_SHELL = ['', 'index.html', 'manifest.webmanifest', 'bingo.svg']
   .map((path) => new URL(path, APP_ROOT).href);

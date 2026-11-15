@@ -70,3 +70,38 @@
 
 /* Tono de las balotas disponibles según la referencia visual */
 .board .number-cell:not(.is-called):not(.is-latest){background:#3b4a60;color:#8794a6;border:2px solid #192b41}
+
+/* Guía de conexión */
+.connection-button{display:flex;align-items:center;gap:7px;min-height:42px;padding:0 13px;border:1px solid #328bf366;border-radius:12px;background:#1c3552;color:#ddecff;cursor:pointer;font-weight:700}
+.connection-button:hover{background:#25476e}
+.connection-backdrop{z-index:7}
+.connections-modal{width:min(850px,100%);max-height:min(92dvh,900px);padding:clamp(16px,3vw,25px)}
+.connections-modal .modal-header{align-items:flex-start;gap:14px}
+.connections-modal .modal-header>div{min-width:0}
+.connection-intro{max-width:690px;margin:8px 0 0;color:#b9c8dc;font-size:13px;line-height:1.55}
+.connection-list{display:grid;gap:10px;margin-top:18px}
+.connection-option{overflow:hidden;border:1px solid #354b67;border-radius:14px;background:#1b2c43}
+.connection-option[open]{background:#1c2e47}
+.connection-option summary{display:flex;align-items:center;gap:12px;min-height:68px;padding:11px 14px;cursor:pointer;list-style:none}
+.connection-option summary::-webkit-details-marker{display:none}
+.connection-option summary:after{content:'⌄';margin-left:auto;color:#9bb0ca;font-size:20px}
+.connection-option[open] summary:after{content:'⌃'}
+.connection-number{display:grid;flex:0 0 34px;width:34px;height:34px;place-items:center;border-radius:50%;background:#328bf3;color:#fff;font-weight:800}
+.connection-option summary>span:nth-child(2){display:grid;gap:3px;min-width:0}
+.connection-option summary strong{color:#f1f6fc;font-size:14px}
+.connection-option summary small{color:#aebfd5;font-size:11px}
+.connection-tag{padding:5px 8px;border-radius:20px;background:#23493e;color:#9de6c5;font-size:10px;font-weight:700;white-space:nowrap}
+.connection-tag.internet{background:#493e27;color:#ffdf8b}
+.connection-content{padding:0 18px 16px 60px;color:#d0dbea;font-size:12px;line-height:1.65}
+.connection-content ol{margin:0 0 10px;padding-left:18px}
+.connection-content li{padding:2px 0 2px 3px}
+.connection-content p{margin:9px 0 0;color:#b9c8dc}
+.connection-content strong{color:#f5f8fc}
+.connection-content a{color:#87c2ff;text-decoration:underline;text-underline-offset:2px}
+.connection-content code,.connection-content kbd{padding:2px 5px;border:1px solid #40546d;border-radius:5px;background:#111d2d;color:#e7eef8;font-family:inherit;font-size:11px}
+.connection-content .download-apk{display:inline-block;padding:7px 10px;border:1px solid #328bf3;border-radius:8px;background:#173c64;color:#fff;font-weight:700;text-decoration:none}
+.connection-content .connection-note{padding-top:8px;border-top:1px solid #354b67;font-size:11px}
+.connection-footer{display:flex;align-items:center;gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid #35465e;color:#aebfd5;font-size:11px;line-height:1.5}
+.connection-footer button{flex:0 0 auto;border:0;border-radius:9px;padding:10px 16px;background:#328bf3;color:#fff;font-weight:700;cursor:pointer}
+@media(max-width:760px){.topbar{flex-wrap:wrap}.toolbar{flex-wrap:wrap}.connection-button{min-height:38px;padding:0 9px}.connection-button .button-label{display:inline}.connections-modal{max-height:94dvh}.connection-option summary{gap:8px;padding:10px}.connection-tag{font-size:9px;padding:4px 6px}.connection-content{padding:0 12px 14px 51px;font-size:11px}.connection-footer{align-items:flex-start}.connection-footer button{padding:9px 12px}}
+@media(max-width:390px){.connection-button{padding:0 7px;font-size:12px}.connection-option summary strong{font-size:12px}.connection-option summary small{font-size:10px}.connection-tag{white-space:normal;text-align:center;max-width:68px}.connection-number{flex-basis:29px;width:29px;height:29px}.connection-footer{font-size:10px}}

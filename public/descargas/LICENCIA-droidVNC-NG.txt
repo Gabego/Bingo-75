@@ -1,0 +1,17 @@
+droidVNC-NG — aviso sobre el APK incluido
+
+Aplicación: droidVNC-NG, versión 2.22.3
+Archivo: droidvnc-ng-2.22.3.apk
+Licencia indicada por el proyecto: GNU General Public License, versión 2.0 (GPL-2.0)
+Código fuente de la versión: https://github.com/bk138/droidVNC-NG/tree/v2.22.3
+Licencia completa del proyecto: https://github.com/bk138/droidVNC-NG/blob/v2.22.3/COPYING
+Lanzamiento oficial y notas: https://github.com/bk138/droidVNC-NG/releases/tag/v2.22.3
+
+Este APK se incluye sin modificaciones para facilitar su descarga a los usuarios
+de Bingo 75. No forma parte del código de Bingo 75 y es mantenido por sus autores.
+La copia suministrada fue comparada con el APK del lanzamiento oficial v2.22.3.
+SHA-256: 71C752DAB6C948C0E1EA06916F2FFD484BBC7C57A48AF0EE05A718ACA3ADAB8B
+
+Consulta el código fuente y los términos completos de la licencia en los enlaces
+anteriores. Para solicitar o revisar el código fuente correspondiente, usa el
+repositorio oficial enlazado.

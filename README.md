@@ -1,4 +1,4 @@
-# Bingo 75 — V0.1.0
+# Bingo 75 — V0.2.0
 
 Aplicación web para administrar una partida presencial de Bingo 75 desde un computador o celular. Los jugadores usan cartones físicos; no es una plataforma de bingo en línea.
 
@@ -47,6 +47,8 @@ Tras una primera carga completa en un contexto seguro, el Service Worker guarda 
 - Ajustes guardados localmente, pantalla completa y reinicio con confirmación.
 - Aviso de partida completada al registrar los 75 números.
 - Diseño responsive para móvil, computador y proyección de pantalla.
+- Guía «Conexión» con instrucciones sencillas para HDMI, Google Meet, VNC desde PC y VNC desde Android.
+- APK probado de droidVNC-NG 2.22.3 en `public/descargas/`, junto con su aviso de licencia y procedencia.
 
 ## Estructura
 
@@ -71,5 +73,13 @@ Copia la carpeta del proyecto a otra ubicación. Las preferencias se guardan en 
 - Validar tamaño/legibilidad en los celulares y televisores objetivo.
 - Confirmar disponibilidad y comportamiento de voces en español en cada dispositivo.
 
-La versión del proyecto se mantiene en **V0.1.0**.
+## V0.2.0 — Conexión y visualización
+
+El botón **Conexión** de la pantalla inicial abre una guía con cuatro métodos, en este orden: TV/proyector por HDMI, Google Meet, VNC desde PC y VNC desde Android. HDMI y VNC por red local no requieren Internet una vez que el equipo y la aplicación están disponibles. Google Meet sí requiere Internet. Para los métodos VNC, todos los dispositivos deben estar conectados a la misma red local o punto de acceso.
+
+La guía explica cómo compartir únicamente la imagen. En TightVNC se debe configurar el acceso de solo lectura; en droidVNC-NG no se debe activar el permiso de Accesibilidad/control remoto. droidVNC-NG se distribuye aquí como APK oficial de la versión 2.22.3; el aviso de licencia y los enlaces a su código fuente están en `public/descargas/`.
+
+Estos métodos duplican la pantalla del equipo anfitrión; no sincronizan el estado del juego entre instalaciones independientes de Bingo 75. El acceso al APK desde GitHub Pages requiere Internet para descargarlo; conviene instalarlo antes de una actividad sin conexión.
+
+La versión actual del proyecto es **V0.2.0**.
 
