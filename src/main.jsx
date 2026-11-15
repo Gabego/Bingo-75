@@ -35,7 +35,9 @@ function App() {
     return () => { window.removeEventListener('beforeinstallprompt', onInstall); document.removeEventListener('fullscreenchange', onFullscreen); };
   }, []);
   useEffect(() => {
-    if ('serviceWorker' in navigator && import.meta.env.PROD) navigator.serviceWorker.register('/sw.js').catch(() => {});
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {});
+    }
   }, []);
 
   const latest = called.at(-1) ?? null;

@@ -22,7 +22,13 @@ npm run build
 npm run preview
 ```
 
-La carpeta `dist/` contiene el sitio estático listo para alojar en un servidor web estático. No se configura ni publica ningún servicio en esta versión.
+La carpeta `dist/` contiene el sitio estático. El flujo de GitHub Pages incluido más abajo la construye y publica automáticamente desde la rama `main`.
+
+## Publicar en GitHub Pages
+
+El flujo `.github/workflows/deploy.yml` construye y publica el sitio automáticamente cuando se suben cambios a `main`. En GitHub, abre **Settings → Pages** y elige **GitHub Actions** como fuente de publicación. La dirección del proyecto será `https://gabego.github.io/Bingo-75/`.
+
+El repositorio es público y el sitio publicado también será accesible públicamente. La app no contiene cuentas ni datos personales de los jugadores.
 
 ## Instalar como PWA
 

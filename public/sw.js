@@ -1,10 +1,12 @@
-const CACHE_NAME = 'bingo75-v0.1.0-r3';
-const APP_SHELL = ['/', '/index.html', '/manifest.webmanifest', '/bingo.svg'];
+const CACHE_NAME = 'bingo75-v0.1.0-r4';
+const APP_ROOT = new URL(self.registration.scope);
+const APP_SHELL = ['', 'index.html', 'manifest.webmanifest', 'bingo.svg']
+  .map((path) => new URL(path, APP_ROOT).href);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then(async (cache) => {
     await cache.addAll(APP_SHELL);
-    const response = await fetch('/');
+    const response = await fetch(APP_ROOT.href);
     const html = await response.text();
     const assets = [...html.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)].map((match) => match[1]);
     if (assets.length) await cache.addAll(assets);
@@ -17,7 +19,8 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const request = event.request;
-  if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
+  const requestUrl = new URL(request.url);
+  if (request.method !== 'GET' || requestUrl.origin !== self.location.origin || !requestUrl.pathname.startsWith(APP_ROOT.pathname)) return;
   event.respondWith(caches.match(request).then((cached) => {
     if (cached) return cached;
     return fetch(request).then((response) => {
@@ -27,7 +30,9 @@ self.addEventListener('fetch', (event) => {
       }
       return response;
     }).catch(async () => {
-      if (request.mode === 'navigate') return (await caches.match('/')) || (await caches.match('/index.html'));
+      if (request.mode === 'navigate') {
+        return (await caches.match(new URL('./', APP_ROOT).href)) || (await caches.match(new URL('index.html', APP_ROOT).href));
+      }
       return new Response('', { status: 503, statusText: 'Offline' });
     });
   }));
